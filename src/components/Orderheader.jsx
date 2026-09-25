@@ -1,6 +1,8 @@
 "use client";
 
-import StatusBadge from "./StatusBadge";
+import StatusBadge from "./OrderStatusbadge";
+
+
 
 export default function OrderHeader({ order }) {
   return (
