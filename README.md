@@ -35,31 +35,3 @@ Purpose
 
 The goal of this screen is to provide a simple and efficient way for users to find their orders and view detailed order information from a centralized interface.
 
-
-folder structure : 
-src
-├── app
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.js
-│   ├── page.js
-│   │
-│   └── orders
-│       └── [id]
-│           └── page.jsx
-│
-├── components
-│   ├── motion.jsx
-│   ├── OrderDeliveryinfo.jsx
-│   ├── OrderDeliverytimeline.jsx
-│   ├── Orderheader.jsx
-│   ├── OrderListItems.jsx
-│   ├── OrderProductsummary.jsx
-│   ├── OrderStatePannel.jsx
-│   ├── OrderStatusbadge.jsx
-│   └── OrderSupportactions.jsx
-│
-├── data
-│   └── orders.js
-│
-
