@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { orders } from "@/data/orders";
+import toast from "react-hot-toast";
 
 // ---- status colors (handles both "out-for-delivery" and "out_for_delivery") ----
 const STATUS_STYLES = {
@@ -45,6 +46,13 @@ export default function OrderDetailsPage() {
   const delayed = useMemo(() => isDelayed(order), [order]);
   const hasTracking = Array.isArray(order?.timeline) && order.timeline.length > 0;
   const style = order ? getStatusStyle(order.status) : null;
+
+  const handleContact = ()=>{
+    toast.success("Contact Support")
+  }
+  const handleReport = ()=>{
+    toast.success("Issue Reported")
+  }
 
   if (!order) {
     return (
@@ -228,10 +236,10 @@ export default function OrderDetailsPage() {
         )
       ) : (
         <div className="flex gap-3">
-          <button className="flex-1 rounded-2xl border border-slate-200 bg-white py-3 text-sm font-medium text-slate-900 transition hover:border-slate-400">
+          <button onClick={handleContact} className="flex-1 rounded-2xl border border-slate-200 bg-white py-3 text-sm font-medium text-slate-900 transition hover:border-slate-400">
             Contact support
           </button>
-          <button className="flex-1 rounded-2xl bg-slate-900 py-3 text-sm font-medium text-white transition hover:opacity-90">
+          <button onClick={handleReport} className="flex-1 rounded-2xl bg-slate-900 py-3 text-sm font-medium text-white transition hover:opacity-90">
             Report an issue
           </button>
         </div>

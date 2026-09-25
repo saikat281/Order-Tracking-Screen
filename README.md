@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Order Tracking Screen
 
-## Getting Started
+A simple and user-friendly Order Tracking Screen that allows users to view, search, and manage their orders efficiently.
 
-First, run the development server:
+Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📦 All Orders: Displays all available orders in one place.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔍 Order Search: Search for a specific order quickly using the search option.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+👁️ View Details: Each order includes a View Details button to navigate to a separate page with complete order information.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📱 Responsive UI: Designed to provide a clean experience across different screen sizes.
 
-## Learn More
+Pages
+Orders Page
 
-To learn more about Next.js, take a look at the following resources:
+Displays the list of all orders along with a search option and a View Details button for each order.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Order Details Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Shows detailed information about the selected order.
 
-## Deploy on Vercel
+User Flow
+Orders List
+    │
+    ├── Search Order
+    │
+    └── View Details
+            │
+            ▼
+      Order Details
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Purpose
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The goal of this screen is to provide a simple and efficient way for users to find their orders and view detailed order information from a centralized interface.
+
+
+folder structure : 
+src
+├── app
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.js
+│   ├── page.js
+│   │
+│   └── orders
+│       └── [id]
+│           └── page.jsx
+│
+├── components
+│   ├── motion.jsx
+│   ├── OrderDeliveryinfo.jsx
+│   ├── OrderDeliverytimeline.jsx
+│   ├── Orderheader.jsx
+│   ├── OrderListItems.jsx
+│   ├── OrderProductsummary.jsx
+│   ├── OrderStatePannel.jsx
+│   ├── OrderStatusbadge.jsx
+│   └── OrderSupportactions.jsx
+│
+├── data
+│   └── orders.js
+│
+
